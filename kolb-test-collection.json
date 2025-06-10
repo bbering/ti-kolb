@@ -1,0 +1,105 @@
+{
+  "info": {
+    "_postman_id": "e7d435d3-a163-4d2e-a9a5-56a5a8187a76",
+    "name": "Kolb Test - Payloads de Exemplo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Teste Kolb - Perfil Acomodador",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"00000000-0000-0000-0000-000000000001\",\n  \"answers\": [4,1,2,3, 4,1,2,3, 4,1,2,3, 4,1,2,3,\n               4,1,2,3, 4,1,2,3, 4,1,2,3, 4,1,2,3,\n               4,1,2,3, 4,1,2,3, 4,1,2,3, 4,1,2,3]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/kolb",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["kolb"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Teste Kolb - Perfil Convergente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"00000000-0000-0000-0000-000000000002\",\n  \"answers\": [3,1,4,2, 3,1,4,2, 3,1,4,2, 3,1,4,2,\n               3,1,4,2, 3,1,4,2, 3,1,4,2, 3,1,4,2,\n               3,1,4,2, 3,1,4,2, 3,1,4,2, 3,1,4,2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/kolb",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["kolb"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Teste Kolb - Perfil Divergente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"00000000-0000-0000-0000-000000000003\",\n  \"answers\": [4,3,1,2, 4,3,1,2, 4,3,1,2, 4,3,1,2,\n               4,3,1,2, 4,3,1,2, 4,3,1,2, 4,3,1,2,\n               4,3,1,2, 4,3,1,2, 4,3,1,2, 4,3,1,2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/kolb",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["kolb"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Teste Kolb - Perfil Assimilador",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"00000000-0000-0000-0000-000000000004\",\n  \"answers\": [1,4,3,2, 1,4,3,2, 1,4,3,2, 1,4,3,2,\n               1,4,3,2, 1,4,3,2, 1,4,3,2, 1,4,3,2,\n               1,4,3,2, 1,4,3,2, 1,4,3,2, 1,4,3,2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/kolb",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["kolb"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
