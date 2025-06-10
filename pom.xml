@@ -38,6 +38,13 @@
     <version>1.18.38</version>
 </dependency>
 
+<!-- dependencia jakarta validation para gerar validaçoes de entrada -->
+<dependency>
+    <groupId>jakarta.validation</groupId>
+    <artifactId>jakarta.validation-api</artifactId>
+    <version>3.1.1</version>
+</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
