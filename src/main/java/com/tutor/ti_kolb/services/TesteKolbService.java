@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tutor.ti_kolb.dtos.KolbResultDTO;
 import com.tutor.ti_kolb.models.TesteKolb;
 import com.tutor.ti_kolb.repositories.KolbRepository;
@@ -21,14 +23,19 @@ public class TesteKolbService {
 
     public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers) {
         TesteKolb testToSave = new TesteKolb();
+        ObjectMapper mapper = new ObjectMapper();
 
-
-        testToSave.setUserId(userUuid); // setando o UUID como mock antes da implementação com rabbit
-
+        testToSave.setUserId(userUuid);
         testToSave.setDataResposta(LocalDateTime.now());
-        testToSave.setRespostas(answers);
-        testToSave.setPerfil(calcularPerfilKolb(answers));
 
+        try {
+            String respostasJson = mapper.writeValueAsString(answers);
+            testToSave.setRespostasJson(respostasJson);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Erro no processo de serializar respostas: ", e);
+        }
+
+        testToSave.setPerfil(calcularPerfilKolb(answers));
         kolbRepository.save(testToSave);
 
         return new KolbResultDTO(testToSave.getUserId(), testToSave.getPerfil());
