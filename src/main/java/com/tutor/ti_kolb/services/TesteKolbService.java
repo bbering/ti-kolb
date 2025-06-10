@@ -20,31 +20,17 @@ public class TesteKolbService {
     }
 
     public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers) {
-        /*
-         * aqui é implementado o metodo que consumirá o json recebido via fila
-         */
-
-        // instanciar a entidade
         TesteKolb testToSave = new TesteKolb();
 
-        // aqui será mockado um userID ainda não-real
-        testToSave.setId(userUuid);
 
-        // criação de uma variavel para capturar o momento em que o teste é respondido
-        // no horario local
-        LocalDateTime answerTime = LocalDateTime.now();
-        testToSave.setDataResposta(answerTime);
+        testToSave.setUserId(userUuid); // setando o UUID como mock antes da implementação com rabbit
 
+        testToSave.setDataResposta(LocalDateTime.now());
         testToSave.setRespostas(answers);
-
-        // aqui o resultado do metodo auxiliar será passado e o perfil setado ao fim do
-        // cálculo
         testToSave.setPerfil(calcularPerfilKolb(answers));
 
         kolbRepository.save(testToSave);
 
-        // montar o DTO para ser retornado ao criar um novo teste e evitar expor dados
-        // sensiveis
         return new KolbResultDTO(testToSave.getUserId(), testToSave.getPerfil());
     }
 
