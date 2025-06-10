@@ -1,5 +1,7 @@
 package com.tutor.ti_kolb.dtos;
 
-public record KolbResultDTO(String name, String profile) {
+import java.util.UUID;
+
+public record KolbResultDTO(UUID name, String profile) {
 
 }
