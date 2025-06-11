@@ -26,7 +26,7 @@ public class KolbController {
 
     @PostMapping("/test")
     public ResponseEntity<KolbResultDTO> doTest(@Valid @RequestBody KolbTestRequestDTO kolbTestData) {
-        KolbResultDTO methodAnswer = testService.makeTest(kolbTestData.userId(), kolbTestData.answers());
+        KolbResultDTO methodAnswer = testService.makeTest(kolbTestData.userId(), kolbTestData.answers(), kolbTestData.name());
         return new ResponseEntity<>(methodAnswer, HttpStatus.CREATED);
     }
 
