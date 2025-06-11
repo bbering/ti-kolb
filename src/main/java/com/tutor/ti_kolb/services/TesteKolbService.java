@@ -23,10 +23,10 @@ public class TesteKolbService {
     }
 
     public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers, String name) {
-        TesteKolb testToSave = new TesteKolb();
+        TesteKolb testToSave = kolbRepository.findByUserId(userUuid)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
         ObjectMapper mapper = new ObjectMapper();
 
-        testToSave.setUserId(userUuid);
         testToSave.setDataResposta(LocalDateTime.now());
 
         try {
@@ -36,7 +36,6 @@ public class TesteKolbService {
             throw new RuntimeException("Erro no processo de serializar respostas: ", e);
         }
 
-        testToSave.setName(name);
         testToSave.setPerfil(calcularPerfilKolb(answers));
         kolbRepository.save(testToSave);
 
