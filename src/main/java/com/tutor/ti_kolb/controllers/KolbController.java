@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tutor.ti_kolb.dtos.KolbResultDTO;
 import com.tutor.ti_kolb.dtos.KolbTestRequestDTO;
+import com.tutor.ti_kolb.dtos.ReceivedUserObjectDTO;
 import com.tutor.ti_kolb.services.TesteKolbService;
 
 import jakarta.validation.Valid;
@@ -27,6 +28,13 @@ public class KolbController {
     public ResponseEntity<KolbResultDTO> doTest(@Valid @RequestBody KolbTestRequestDTO kolbTestData) {
         KolbResultDTO methodAnswer = testService.makeTest(kolbTestData.userId(), kolbTestData.answers());
         return new ResponseEntity<>(methodAnswer, HttpStatus.CREATED);
+    }
+
+    // endpoint para mockar o comportamento do rabbitmq
+    @PostMapping("/mock-rabbit")
+    public ResponseEntity<String> mockRabbitReception(@RequestBody ReceivedUserObjectDTO userDto) {
+        testService.saveInitialUser(userDto.userId(), userDto.name());
+        return ResponseEntity.ok("Usuário recebido e salvo com sucesso.");
     }
 
 }
