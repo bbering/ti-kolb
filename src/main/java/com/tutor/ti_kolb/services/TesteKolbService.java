@@ -22,7 +22,7 @@ public class TesteKolbService {
         this.kolbRepository = kolbRepository;
     }
 
-    public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers, String name) {
+    public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers) {
         TesteKolb testToSave = kolbRepository.findByUserId(userUuid)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
         ObjectMapper mapper = new ObjectMapper();
