@@ -22,7 +22,7 @@ public class TesteKolbService {
         this.kolbRepository = kolbRepository;
     }
 
-    public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers) {
+    public KolbResultDTO makeTest(UUID userUuid, List<Integer> answers, String name) {
         TesteKolb testToSave = new TesteKolb();
         ObjectMapper mapper = new ObjectMapper();
 
@@ -36,6 +36,7 @@ public class TesteKolbService {
             throw new RuntimeException("Erro no processo de serializar respostas: ", e);
         }
 
+        testToSave.setName(name);
         testToSave.setPerfil(calcularPerfilKolb(answers));
         kolbRepository.save(testToSave);
 
