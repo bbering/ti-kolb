@@ -2,6 +2,7 @@ package com.tutor.ti_kolb.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
@@ -39,6 +40,20 @@ public class TesteKolbService {
         kolbRepository.save(testToSave);
 
         return new KolbResultDTO(testToSave.getUserId(), testToSave.getPerfil());
+    }
+
+    // metodo utilizado para criar testes parciais
+    public void saveInitialUser(UUID userId, String name) {
+        Optional<TesteKolb> existing = kolbRepository.findByUserId(userId);
+        if (existing.isPresent()) {
+            // user já existe, nao é necessário salvar
+            return;
+        }
+
+        TesteKolb novoTeste = new TesteKolb();
+        novoTeste.setUserId(userId);
+        novoTeste.setName(name);
+        kolbRepository.save(novoTeste);
     }
 
     public String calcularPerfilKolb(List<Integer> respostas) {
