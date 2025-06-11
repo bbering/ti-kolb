@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,18 +24,20 @@ import lombok.Setter;
 public class TesteKolb {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private UUID userId;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = false)
+    private String name;
+
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String respostasJson;
 
-    @Column(nullable = false)
-    private String perfil; // assimilador, convergente...
-
-    @Column(nullable = false)
     private LocalDateTime dataResposta;
+
+    private String perfil;
 }
