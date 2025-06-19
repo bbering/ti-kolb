@@ -38,6 +38,14 @@
     <version>1.18.38</version>
 </dependency>
 
+<!-- dependencia springdoc para documentação da api -->
+
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.8.0</version>
+</dependency>
+
 <!-- dependencia jakarta validation para gerar validaçoes de entrada -->
 <dependency>
     <groupId>jakarta.validation</groupId>
