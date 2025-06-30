@@ -1,14 +1,14 @@
-\<div align="center"\>
-\<h1\>ti-kolb\</h1\>
-\<p\>
+<div align="center"\>
+<h1\>ti-kolb\</h1\>
+<p\>
 Serviço responsável por aplicar o teste de Estilos de Aprendizagem de Kolb para a aplicação Tutor Inteligente.
-\</p\>
+</p\>
 
-\<p\>
-\<img alt="Versão do Java" src="[https://img.shields.io/badge/Java-17-blue?logo=openjdk\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Java-17-blue%3Flogo%3Dopenjdk%26logoColor%3Dwhite)"\>
-\<img alt="Versão do Spring Boot" src="[https://img.shields.io/badge/Spring\_Boot-3.5.0-brightgreen?logo=spring\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Spring_Boot-3.5.0-brightgreen%3Flogo%3Dspring%26logoColor%3Dwhite)"\>
-\</p\>
-\</div\>
+<p\>
+<img alt="Versão do Java" src="[https://img.shields.io/badge/Java-17-blue?logo=openjdk\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Java-17-blue%3Flogo%3Dopenjdk%26logoColor%3Dwhite)"\>
+<img alt="Versão do Spring Boot" src="[https://img.shields.io/badge/Spring\_Boot-3.5.0-brightgreen?logo=spring\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Spring_Boot-3.5.0-brightgreen%3Flogo%3Dspring%26logoColor%3Dwhite)"\>
+</p\>
+</div\>
 
 -----
 
