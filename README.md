@@ -1,35 +1,75 @@
-# ti-kolb
+\<div align="center"\>
+\<h1\>ti-kolb\</h1\>
+\<p\>
+Serviço responsável por aplicar o teste de Estilos de Aprendizagem de Kolb para a aplicação Tutor Inteligente.
+\</p\>
 
-## Descrição
+\<p\>
+\<img alt="Versão do Java" src="[https://img.shields.io/badge/Java-17-blue?logo=openjdk\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Java-17-blue%3Flogo%3Dopenjdk%26logoColor%3Dwhite)"\>
+\<img alt="Versão do Spring Boot" src="[https://img.shields.io/badge/Spring\_Boot-3.5.0-brightgreen?logo=spring\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Spring_Boot-3.5.0-brightgreen%3Flogo%3Dspring%26logoColor%3Dwhite)"\>
+\</p\>
+\</div\>
 
-Este projeto é o serviço "Kolb" para a aplicação "Tutor Inteligente". Sua principal responsabilidade é aplicar o teste de Estilos de Aprendizagem de Kolb, que pode ser realizado de forma parcial ou total. O serviço recebe o ID e o nome do usuário e, com base nas respostas fornecidas, calcula e determina o seu perfil de aprendizagem.
+-----
 
-## Tecnologias Utilizadas
+## 📝 Índice
 
-O projeto foi construído utilizando as seguintes tecnologias e bibliotecas principais:
+  - [Sobre o Projeto](https://www.google.com/search?q=%23-sobre-o-projeto)
+  - [✨ Principais Funcionalidades](https://www.google.com/search?q=%23-principais-funcionalidades)
+  - [🛠️ Tecnologias Utilizadas](https://www.google.com/search?q=%23%EF%B8%8F-tecnologias-utilizadas)
+  - [🚀 Começando](https://www.google.com/search?q=%23-come%C3%A7ando)
+      - [Pré-requisitos](https://www.google.com/search?q=%23pr%C3%A9-requisitos)
+      - [Instalação e Execução](https://www.google.com/search?q=%23instala%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o)
+  - [📖 Documentação da API](https://www.google.com/search?q=%23-documenta%C3%A7%C3%A3o-da-api)
+  - [👤 Contato](https://www.google.com/search?q=%23-contato)
 
-  * **Java 17**
-  * **Spring Boot 3.5.0**
-      * **Spring Web:** Para a criação de APIs RESTful.
-      * **Spring Data JPA:** Para a persistência de dados com o banco de dados.
-      * **Spring Boot Actuator:** Para monitoramento e gerenciamento da aplicação.
-      * **Spring AMQP:** Para integração com o RabbitMQ e troca de mensagens.
-  * **MySQL:** O projeto está configurado para se conectar a um banco de dados MySQL em tempo de execução.
-  * **Lombok:** Para reduzir a quantidade de código boilerplate (getters, setters, construtores, etc.).
-  * **SpringDoc OpenAPI (Swagger):** Para a documentação automática da API.
-  * **Jakarta Validation:** Para a validação dos dados de entrada.
-  * **Jackson:** Para o tratamento eficiente de objetos JSON.
+-----
 
-## Pré-requisitos
+## 🧐 Sobre o Projeto
 
-Antes de executar o projeto, certifique-se de que você tem os seguintes softwares instalados em sua máquina:
+Este projeto é o serviço **"Kolb"** para a aplicação "Tutor Inteligente". Sua principal responsabilidade é aplicar o teste de Estilos de Aprendizagem de Kolb, que pode ser realizado de forma parcial ou total. O serviço recebe o ID e o nome do usuário e, com base nas respostas fornecidas, calcula e determina o seu perfil de aprendizagem.
 
-  * JDK 17 ou superior
-  * Maven 3.6 ou superior
-  * Uma instância do MySQL em execução
-  * Uma instância do RabbitMQ em execução
+-----
 
-## Como Executar o Projeto
+## ✨ Principais Funcionalidades
+
+  - Aplicação do teste de Kolb, de forma parcial ou completa.
+  - Cálculo do perfil de aprendizagem do usuário com base nas respostas.
+  - Recepção de dados do usuário (ID, nome) para iniciar o processo.
+  - Integração com outros serviços através de mensageria com **RabbitMQ**.
+
+-----
+
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto foi construído com as seguintes tecnologias:
+
+| Tecnologia | Descrição |
+| :--- | :--- |
+| **Java 17** | Linguagem de programação principal. |
+| **Spring Boot 3.5.0** | Framework para construção da aplicação, incluindo Web, Data JPA e Actuator. |
+| **Spring AMQP** | Integração com o sistema de mensageria RabbitMQ. |
+| **MySQL** | Banco de dados relacional para persistência dos dados. |
+| **SpringDoc (Swagger)** | Documentação automática e interativa da API RESTful. |
+| **Lombok** | Biblioteca para redução de código boilerplate. |
+| **Jakarta Validation** | Validação dos dados de entrada da API. |
+| **Jackson** | Biblioteca para manipulação de objetos JSON. |
+| **Maven** | Gerenciador de dependências e build do projeto. |
+
+-----
+
+## 🚀 Começando
+
+Siga estas instruções para ter uma cópia do projeto rodando na sua máquina local para desenvolvimento e testes.
+
+### Pré-requisitos
+
+  - **Java Development Kit (JDK) 17** ou superior.
+  - **Maven 3.6** ou superior.
+  - Uma instância do **MySQL** em execução.
+  - Uma instância do **RabbitMQ** em execução.
+
+### Instalação e Execução
 
 1.  **Clone o repositório:**
 
@@ -38,8 +78,8 @@ Antes de executar o projeto, certifique-se de que você tem os seguintes softwar
     cd ti-kolb
     ```
 
-2.  **Configure o banco de dados e o RabbitMQ:**
-    Abra o arquivo `src/main/resources/application.properties` e configure as propriedades de conexão com o seu banco de dados MySQL e com o seu servidor RabbitMQ.
+2.  **Configure o ambiente:**
+    No arquivo `src/main/resources/application.properties`, configure as propriedades de conexão com seu banco de dados MySQL e com seu servidor RabbitMQ.
 
     ```properties
     # Exemplo para MySQL
@@ -54,8 +94,7 @@ Antes de executar o projeto, certifique-se de que você tem os seguintes softwar
     spring.rabbitmq.password=guest
     ```
 
-3.  **Execute a aplicação com o Maven:**
-    Você pode iniciar a aplicação utilizando o plugin do Spring Boot para o Maven:
+3.  **Execute a aplicação:**
 
     ```bash
     mvn spring-boot:run
@@ -63,10 +102,17 @@ Antes de executar o projeto, certifique-se de que você tem os seguintes softwar
 
 A aplicação estará disponível em `http://localhost:8080`.
 
-## Documentação da API
+-----
 
-Este projeto utiliza o **SpringDoc** para gerar a documentação da API em tempo real. Após iniciar a aplicação, você pode acessar a interface do Swagger UI no seguinte endereço:
+## 📖 Documentação da API
 
-[http://localhost:8080/swagger-ui.html](https://www.google.com/search?q=http://localhost:8080/swagger-ui.html)
+Após iniciar o projeto, a documentação completa e interativa da API pode ser acessada via Swagger UI no seu navegador:
 
-Lá você encontrará todos os *endpoints* disponíveis, com seus respectivos parâmetros, e poderá testá-los diretamente pelo navegador.
+**🔗 [http://localhost:8080/swagger-ui.html](https://www.google.com/search?q=http://localhost:8080/swagger-ui.html)**
+
+-----
+
+
+## 👤 Contato
+
+Link do Projeto: [https://github.com/bbering/ti-kolb](https://github.com/bbering/ti-kolb)
