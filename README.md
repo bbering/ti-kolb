@@ -1,44 +1,43 @@
-<div align="center"\>
-<h1\>ti-kolb\</h1\>
-<p\>
-Serviço responsável por aplicar o teste de Estilos de Aprendizagem de Kolb para a aplicação Tutor Inteligente.
-</p\>
+<div align="center">
+  <h1>ti-kolb</h1>
+  <p>
+    Serviço responsável por aplicar o teste de Estilos de Aprendizagem de Kolb para a aplicação Tutor Inteligente.
+  </p>
+  <p>
+    <img alt="Versão do Java" src="https://img.shields.io/badge/Java-17-blue?logo=openjdk&logoColor=white">
+    <img alt="Versão do Spring Boot" src="https://img.shields.io/badge/Spring_Boot-3.5.0-brightgreen?logo=spring&logoColor=white">
+  </p>
+</div>
 
-<p\>
-<img alt="Versão do Java" src="[https://img.shields.io/badge/Java-17-blue?logo=openjdk\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Java-17-blue%3Flogo%3Dopenjdk%26logoColor%3Dwhite)"\>
-<img alt="Versão do Spring Boot" src="[https://img.shields.io/badge/Spring\_Boot-3.5.0-brightgreen?logo=spring\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Spring_Boot-3.5.0-brightgreen%3Flogo%3Dspring%26logoColor%3Dwhite)"\>
-</p\>
-</div\>
-
------
+---
 
 ## 📝 Índice
 
-  - [Sobre o Projeto](https://www.google.com/search?q=%23-sobre-o-projeto)
-  - [✨ Principais Funcionalidades](https://www.google.com/search?q=%23-principais-funcionalidades)
-  - [🛠️ Tecnologias Utilizadas](https://www.google.com/search?q=%23%EF%B8%8F-tecnologias-utilizadas)
-  - [🚀 Começando](https://www.google.com/search?q=%23-come%C3%A7ando)
-      - [Pré-requisitos](https://www.google.com/search?q=%23pr%C3%A9-requisitos)
-      - [Instalação e Execução](https://www.google.com/search?q=%23instala%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o)
-  - [📖 Documentação da API](https://www.google.com/search?q=%23-documenta%C3%A7%C3%A3o-da-api)
-  - [👤 Contato](https://www.google.com/search?q=%23-contato)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [✨ Principais Funcionalidades](#-principais-funcionalidades)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🚀 Começando](#-começando)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação e Execução](#instalação-e-execução)
+- [📖 Documentação da API](#-documentação-da-api))
+- [👤 Contato](#-contato)
 
------
+---
 
 ## 🧐 Sobre o Projeto
 
 Este projeto é o serviço **"Kolb"** para a aplicação "Tutor Inteligente". Sua principal responsabilidade é aplicar o teste de Estilos de Aprendizagem de Kolb, que pode ser realizado de forma parcial ou total. O serviço recebe o ID e o nome do usuário e, com base nas respostas fornecidas, calcula e determina o seu perfil de aprendizagem.
 
------
+---
 
 ## ✨ Principais Funcionalidades
 
-  - Aplicação do teste de Kolb, de forma parcial ou completa.
-  - Cálculo do perfil de aprendizagem do usuário com base nas respostas.
-  - Recepção de dados do usuário (ID, nome) para iniciar o processo.
-  - Integração com outros serviços através de mensageria com **RabbitMQ**.
+- Aplicação do teste de Kolb, de forma parcial ou completa.
+- Cálculo do perfil de aprendizagem do usuário com base nas respostas.
+- Recepção de dados do usuário (ID, nome) para iniciar o processo.
+- Integração com outros serviços através de mensageria com **RabbitMQ**.
 
------
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -56,7 +55,7 @@ Este projeto foi construído com as seguintes tecnologias:
 | **Jackson** | Biblioteca para manipulação de objetos JSON. |
 | **Maven** | Gerenciador de dependências e build do projeto. |
 
------
+---
 
 ## 🚀 Começando
 
@@ -64,23 +63,21 @@ Siga estas instruções para ter uma cópia do projeto rodando na sua máquina l
 
 ### Pré-requisitos
 
-  - **Java Development Kit (JDK) 17** ou superior.
-  - **Maven 3.6** ou superior.
-  - Uma instância do **MySQL** em execução.
-  - Uma instância do **RabbitMQ** em execução.
+- **Java Development Kit (JDK) 17** ou superior.
+- **Maven 3.6** ou superior.
+- Uma instância do **MySQL** em execução.
+- Uma instância do **RabbitMQ** em execução.
 
 ### Instalação e Execução
 
 1.  **Clone o repositório:**
-
     ```bash
-    git clone https://github.com/bbering/ti-kolb
+    git clone [https://github.com/bbering/ti-kolb](https://github.com/bbering/ti-kolb)
     cd ti-kolb
     ```
 
 2.  **Configure o ambiente:**
     No arquivo `src/main/resources/application.properties`, configure as propriedades de conexão com seu banco de dados MySQL e com seu servidor RabbitMQ.
-
     ```properties
     # Exemplo para MySQL
     spring.datasource.url=jdbc:mysql://localhost:3306/seu_banco
@@ -95,24 +92,23 @@ Siga estas instruções para ter uma cópia do projeto rodando na sua máquina l
     ```
 
 3.  **Execute a aplicação:**
-
     ```bash
     mvn spring-boot:run
     ```
 
 A aplicação estará disponível em `http://localhost:8080`.
 
------
+---
 
 ## 📖 Documentação da API
 
 Após iniciar o projeto, a documentação completa e interativa da API pode ser acessada via Swagger UI no seu navegador:
 
-**🔗 [http://localhost:8080/swagger-ui.html](https://www.google.com/search?q=http://localhost:8080/swagger-ui.html)**
+**🔗 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
------
-
+---
 
 ## 👤 Contato
+
 
 Link do Projeto: [https://github.com/bbering/ti-kolb](https://github.com/bbering/ti-kolb)
