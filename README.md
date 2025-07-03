@@ -72,7 +72,7 @@ Siga estas instruções para ter uma cópia do projeto rodando na sua máquina l
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/bbering/ti-kolb](https://github.com/bbering/ti-kolb)
+    git clone https://github.com/bbering/ti-kolb
     cd ti-kolb
     ```
 
